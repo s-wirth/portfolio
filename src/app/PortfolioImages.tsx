@@ -12,6 +12,9 @@ import FierySunset from "../../public/portfolioImg/displayImg/FierySunset.jpeg"
 import Pastels from "../../public/portfolioImg/displayImg/Pastels.jpeg"
 import WaterDragon from "../../public/portfolioImg/displayImg/WaterDragon.jpeg"
 
+import AS1 from "../../public/portfolioImg/detailImg/AmberSunset/AS1.jpeg"
+import AS2 from "../../public/portfolioImg/detailImg/AmberSunset/AS2.jpeg"
+
 // export const diim =[{..img, title="Amber Sunset"}]
 export const DisplayImages = {
   AmberSunset: {...AmberSunset, title:"Amber Sunset"},
@@ -26,4 +29,11 @@ export const DisplayImages = {
   Pastels: {...Pastels, title:"Pastels"},
   WaterDragon: {...WaterDragon, title:"Water Dragon"},
   DragonHeart: {...DragonHeart, title:"Dragon Heart"},
+}
+
+export const DetailImages = {
+  AmberSunset: [
+    {title:"Amber Sunset", src: AS1},
+    {title:"Amber Sunset", src: AS2},
+  ]
 }

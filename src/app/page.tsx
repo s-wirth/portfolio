@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { DisplayImages } from "./DisplayImages";
+import { DisplayImages } from "./PortfolioImages";
 import img from "../../public/portfolioImg/displayImg/AmberSunset.jpeg";
 
 export default function Home() {
@@ -13,7 +13,10 @@ export default function Home() {
           {Object.keys(DisplayImages).map((key) => {
             console.log(key, DisplayImages[key]);
             return (
-              <Link key={key} href={`/${DisplayImages[key].title.replace(/\s/g, "_")}`}>
+              <Link
+                key={key}
+                href={`/${DisplayImages[key].title.replace(/\s/g, "")}`}
+              >
                 <div className={styles.displayImage}>
                   <Image
                     src={DisplayImages[key].src}
