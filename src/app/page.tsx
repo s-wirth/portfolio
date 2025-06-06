@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import { DisplayImages } from "./DisplayImages";
 import img from "../../public/portfolioImg/displayImg/AmberSunset.jpeg";
 
@@ -12,18 +13,25 @@ export default function Home() {
           {Object.keys(DisplayImages).map((key) => {
             console.log(key, DisplayImages[key]);
             return (
-              <div key={key} className={styles.displayImage}>
-                <Image
-                  src={DisplayImages[key].src}
-                  alt={DisplayImages[key].alt}
-                  width={DisplayImages[key].width / (DisplayImages[key].height/300)}
-                  height={300}
-                />
-                <div className={styles.overlay}>
-                  <p className={styles.overlay_title}>{DisplayImages[key].alt}</p>
-                  <p>Materials used</p>
+              <Link key={key} href={`/${DisplayImages[key].title.replace(/\s/g, "_")}`}>
+                <div className={styles.displayImage}>
+                  <Image
+                    src={DisplayImages[key].src}
+                    alt={DisplayImages[key].title}
+                    width={
+                      DisplayImages[key].width /
+                      (DisplayImages[key].height / 300)
+                    }
+                    height={300}
+                  />
+                  <div className={styles.overlay}>
+                    <p className={styles.overlay_title}>
+                      {DisplayImages[key].title}
+                    </p>
+                    <p>Materials used</p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>

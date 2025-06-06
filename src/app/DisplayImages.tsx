@@ -12,18 +12,18 @@ import FierySunset from "../../public/portfolioImg/displayImg/FierySunset.jpeg"
 import Pastels from "../../public/portfolioImg/displayImg/Pastels.jpeg"
 import WaterDragon from "../../public/portfolioImg/displayImg/WaterDragon.jpeg"
 
-// export const diim =[{..img, alt="Amber Sunset"}]
+// export const diim =[{..img, title="Amber Sunset"}]
 export const DisplayImages = {
-  AmberSunset: {...AmberSunset, alt:"Amber Sunset"},
-  HopefulSunset: {...HopefulSunset, alt:"Hopeful Sunset"},
-  RainbowSunset: {...RainbowSunset, alt:"Rainbow Sunset"},
-  ChaosStorm: {...ChaosStorm, alt:"Chaos Storm"},
-  DreamySunset: {...DreamySunset, alt:"Dreamy Sunset"},
-  Nebula: {...Nebula, alt:"Nebula"},
-  Stormy: {...Stormy, alt:"Stormy"},
-  ChildPortrait: {...ChildPortrait, alt:"Child Portrait"},
-  FierySunset: {...FierySunset, alt:"Fiery Sunset"},
-  Pastels: {...Pastels, alt:"Pastels"},
-  WaterDragon: {...WaterDragon, alt:"Water Dragon"},
-  DragonHeart: {...DragonHeart, alt:"Dragon Heart"},
+  AmberSunset: {...AmberSunset, title:"Amber Sunset"},
+  HopefulSunset: {...HopefulSunset, title:"Hopeful Sunset"},
+  RainbowSunset: {...RainbowSunset, title:"Rainbow Sunset"},
+  ChaosStorm: {...ChaosStorm, title:"Chaos Storm"},
+  DreamySunset: {...DreamySunset, title:"Dreamy Sunset"},
+  Nebula: {...Nebula, title:"Nebula"},
+  Stormy: {...Stormy, title:"Stormy"},
+  ChildPortrait: {...ChildPortrait, title:"Child Portrait"},
+  FierySunset: {...FierySunset, title:"Fiery Sunset"},
+  Pastels: {...Pastels, title:"Pastels"},
+  WaterDragon: {...WaterDragon, title:"Water Dragon"},
+  DragonHeart: {...DragonHeart, title:"Dragon Heart"},
 }
