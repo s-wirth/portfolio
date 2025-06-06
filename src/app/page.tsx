@@ -12,13 +12,17 @@ export default function Home() {
           {Object.keys(DisplayImages).map((key) => {
             console.log(key, DisplayImages[key]);
             return (
-              <Image
-                src={DisplayImages[key].src}
-                alt={DisplayImages[key].alt}
-                width={DisplayImages[key].width / (DisplayImages[key].height/300)}
-                height={300}
-                key={key}
-              />
+              <div key={key} className={styles.displayImage}>
+                <Image
+                  src={DisplayImages[key].src}
+                  alt={DisplayImages[key].alt}
+                  width={DisplayImages[key].width / (DisplayImages[key].height/300)}
+                  height={300}
+                />
+                <div className={styles.overlay}>
+                  <p>{DisplayImages[key].alt}</p>
+                </div>
+              </div>
             );
           })}
         </div>

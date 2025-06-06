@@ -79,6 +79,23 @@
   width: 80%;
 }
 
+.displayImage {
+  position: relative;
+  height: 300px;
+  &:hover .overlay {
+    opacity: 1;
+  }
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10svh;
+  opacity: 0;
+  background: red;
+}
+
 .ctas {
   display: flex;
   gap: 16px;
