@@ -20,14 +20,14 @@ export default function Home() {
                   height={300}
                 />
                 <div className={styles.overlay}>
-                  <p>{DisplayImages[key].alt}</p>
+                  <p className={styles.overlay_title}>{DisplayImages[key].alt}</p>
+                  <p>Materials used</p>
                 </div>
               </div>
             );
           })}
         </div>
       </main>
-      <footer className={styles.footer}>footer</footer>
     </div>
   );
 }
