@@ -14,9 +14,9 @@ export default async function BlogPostPage({
   return (
     <div>
       <h1>{painting}</h1>
-      {DetailImages[painting].map((img) => {
+      {DetailImages[painting].map((img, index) => {
         return (
-          <div key={img.title}>
+          <div key={index}>
             <h2>{img.title}</h2>
             <Image
               src={img.src}
