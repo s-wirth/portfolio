@@ -3,12 +3,22 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 100%;
 }
 
 .gallery_carousel {
-  background:red;
+  background:#413775;
+  display: flex;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
 }
 
 .gallery_thumbnails {
-  background: green;
+  background: #302956;
+  display: flex;
+  flex-wrap: wrap;
+  width: 30%;
+  align-items: flex-start;
+  justify-content: space-around;
 }
