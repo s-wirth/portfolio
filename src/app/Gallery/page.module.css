@@ -3,15 +3,38 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
 }
 
 .gallery_carousel {
   background:#413775;
   display: flex;
+  position: relative;
   width: 70%;
   align-items: center;
   justify-content: center;
+}
+
+.gallery_image,
+.gallery_thumbnail {
+  max-width: 100%;
+}
+
+.gallery_carousel_btnleft,
+.gallery_carousel_btnright {
+  top: 0;
+  height: 100%;
+  width: 20%;
+  position: absolute;
+
+}
+.gallery_carousel_btnleft {
+  background-image: linear-gradient(to left, rgba(0,0,0,0), #10141f);
+  left: 0;
+}
+.gallery_carousel_btnright {
+  background-image: linear-gradient(to right, rgba(0,0,0,0), #10141f);
+  right: 0;
 }
 
 .gallery_thumbnails {
