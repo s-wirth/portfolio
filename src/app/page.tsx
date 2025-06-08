@@ -15,7 +15,7 @@ export default function Home() {
             return (
               <Link
                 key={key}
-                href={`/${DisplayImages[key].title.replace(/\s/g, "")}`}
+                href={`/${DisplayImages[key].portfolio_key}`}
               >
                 <div className={styles.displayImage}>
                   <Image

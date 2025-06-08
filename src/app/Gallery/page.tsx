@@ -2,21 +2,26 @@
 import styles from "./page.module.css";
 import { useState } from "react";
 
-const displayImages = [
-  {
-    src: "https://placehold.co/600x400",
-    alt: "Image 1",
-    thumbnail: "https://placehold.co/100x100",
-  },
-  {
-    src: "https://placehold.co/600x400/000000/FFF",
-    alt: "Image 2",
-    thumbnail: "https://placehold.co/100x100/000000/FFF",
-  },
-];
+// const displayImages = [
+//   {
+//     src: "https://placehold.co/600x400",
+//     alt: "Image 1",
+//     thumbnail: "https://placehold.co/100x100",
+//   },
+//   {
+//     src: "https://placehold.co/600x400/000000/FFF",
+//     alt: "Image 2",
+//     thumbnail: "https://placehold.co/100x100/000000/FFF",
+//   },
+// ];
 
-export default function Gallery() {
+export default function Gallery(galleryImages: any) {
+  console.log('galleryImages', galleryImages)
+  console.log('galleryImages keys', Object.keys(galleryImages))
+  console.log('galleryImages values', galleryImages['galleryImages']['images'])
   const [displayImageIndex, setDisplayImageIndex] = useState(0);
+  const [displayImages, setDisplayImages] = useState(galleryImages['galleryImages']['images']);
+  console.log('displayImages', displayImages)
   return (
     <div className={styles.gallery_container}>
       <div className={styles.gallery_carousel}>
@@ -46,7 +51,7 @@ export default function Gallery() {
         ><div className={styles.arrow_right} /></div>
         <img
           className={styles.gallery_image}
-          src={displayImages[displayImageIndex].src}
+          src={displayImages[displayImageIndex].src.src}
           alt={displayImages[displayImageIndex].alt}
         />
       </div>
@@ -55,7 +60,7 @@ export default function Gallery() {
           <img
             key={index}
             className={styles.gallery_thumbnail + " " + (index === displayImageIndex ? styles.thumbnail_selected : "")}
-            src={image.thumbnail}
+            src={image.thumbnail.src}
             alt={image.alt}
             onClick={() => {
               setDisplayImageIndex(index);
