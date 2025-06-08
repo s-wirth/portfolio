@@ -29,7 +29,9 @@ export default function Gallery() {
             }
             setDisplayImageIndex(newIndex);
           }}
-          />
+          >
+            <div className={styles.arrow_left} />
+          </div>
         <div
           className={styles.gallery_carousel_btnright}
           onClick={() => {
@@ -41,23 +43,22 @@ export default function Gallery() {
             setDisplayImageIndex(newIndex);
 
           }}
-        />
+        ><div className={styles.arrow_right} /></div>
         <img
           className={styles.gallery_image}
           src={displayImages[displayImageIndex].src}
-          alt="Image 1"
+          alt={displayImages[displayImageIndex].alt}
         />
       </div>
-      <div className={styles.gallery_thumbnails}>
+      <div className={styles.gallery_thumbnails_showcase}>
         {displayImages.map((image, index) => (
           <img
             key={index}
-            className={styles.gallery_thumbnail}
+            className={styles.gallery_thumbnail + " " + (index === displayImageIndex ? styles.thumbnail_selected : "")}
             src={image.thumbnail}
             alt={image.alt}
             onClick={() => {
               setDisplayImageIndex(index);
-              console.log("image.alt", image.alt);
             }}
           />
         ))}
