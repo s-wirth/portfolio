@@ -1,7 +1,6 @@
-'use client'
+"use client";
 import styles from "./page.module.css";
-import { useState } from 'react';
-
+import { useState } from "react";
 
 const displayImages = [
   {
@@ -14,16 +13,31 @@ const displayImages = [
     alt: "Image 2",
     thumbnail: "https://placehold.co/100x100/000000/FFF",
   },
-]
+];
 
 export default function Gallery() {
-const [displayImageSrc, setDisplayImageSrc] = useState(displayImages[0].src); 
+  const [displayImageIndex, setDisplayImageIndex] = useState(0);
   return (
     <div className={styles.gallery_container}>
       <div className={styles.gallery_carousel}>
-        <div className={styles.gallery_carousel_btnright}></div>
         <div className={styles.gallery_carousel_btnleft}></div>
-        <img className={styles.gallery_image} src={displayImageSrc} alt="Image 1" />
+        <div
+          className={styles.gallery_carousel_btnright}
+          onClick={() => {
+            const displayImagesLength = displayImages.length;
+            let newIndex = displayImageIndex + 1;
+            if (newIndex >= displayImagesLength) {
+              newIndex = 0;
+            }
+            setDisplayImageIndex(newIndex);
+
+          }}
+        ></div>
+        <img
+          className={styles.gallery_image}
+          src={displayImages[displayImageIndex].src}
+          alt="Image 1"
+        />
       </div>
       <div className={styles.gallery_thumbnails}>
         {displayImages.map((image, index) => (
@@ -33,13 +47,12 @@ const [displayImageSrc, setDisplayImageSrc] = useState(displayImages[0].src);
             src={image.thumbnail}
             alt={image.alt}
             onClick={() => {
-              setDisplayImageSrc(image.src);
-              console.log('image.alt', image.alt)
+              setDisplayImageIndex(index);
+              console.log("image.alt", image.alt);
             }}
           />
         ))}
       </div>
     </div>
   );
-};
-
+}
