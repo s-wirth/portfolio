@@ -20,7 +20,16 @@ export default function Gallery() {
   return (
     <div className={styles.gallery_container}>
       <div className={styles.gallery_carousel}>
-        <div className={styles.gallery_carousel_btnleft}></div>
+        <div className={styles.gallery_carousel_btnleft}
+          onClick={() => {
+            const displayImagesLength = displayImages.length;
+            let newIndex = displayImageIndex - 1;
+            if (newIndex < 0) {
+              newIndex = displayImagesLength - 1;
+            }
+            setDisplayImageIndex(newIndex);
+          }}
+          />
         <div
           className={styles.gallery_carousel_btnright}
           onClick={() => {
@@ -32,7 +41,7 @@ export default function Gallery() {
             setDisplayImageIndex(newIndex);
 
           }}
-        ></div>
+        />
         <img
           className={styles.gallery_image}
           src={displayImages[displayImageIndex].src}
