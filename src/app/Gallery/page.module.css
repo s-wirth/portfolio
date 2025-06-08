@@ -1,0 +1,14 @@
+.gallery_container {
+  background: blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.gallery_carousel {
+  background:red;
+}
+
+.gallery_thumbnails {
+  background: green;
+}
