@@ -32,7 +32,6 @@ export default function Home() {
                     <p className={styles.overlay_title}>
                       {DisplayImages[key].title}
                     </p>
-                    <p>Materials used</p>
                   </div>
                 </div>
               </Link>
