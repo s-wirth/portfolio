@@ -23,9 +23,9 @@ export default async function DetailPage({
         </div>
         <aside className={styles.details}>
           <h2 className={styles.details_title}>Details</h2>
-          <ul>
-            <li>Materials: {paintingData.meta.materials}</li>
-            <li>Dimensions: {paintingData.meta.dimensions}</li>
+          <ul className={styles.details_list}>
+            <li className={styles.details_list_item}>Materials: {paintingData.meta.materials}</li>
+            <li className={styles.details_list_item}>Dimensions: {paintingData.meta.dimensions}</li>
           </ul>
         </aside>
       </main>
