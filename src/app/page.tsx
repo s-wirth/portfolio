@@ -7,16 +7,16 @@ import img from "../../public/portfolioImg/displayImg/AmberSunset.jpeg";
 export default function Home() {
   return (
     <div className={styles.page}>
-      <header className={styles.header}>Sophie Wirth - Artist Portfolio</header>
+      <header className={styles.header}>
+        <h1 className={styles.header_title}>Sophie Wirth </h1>
+        <h2 className={styles.header_subtitle}>Artist Portfolio</h2>
+      </header>
       <main className={styles.main}>
         <div className={styles.gallery}>
           {Object.keys(DisplayImages).map((key) => {
             console.log(key, DisplayImages[key]);
             return (
-              <Link
-                key={key}
-                href={`/${DisplayImages[key].portfolio_key}`}
-              >
+              <Link key={key} href={`/${DisplayImages[key].portfolio_key}`}>
                 <div className={styles.displayImage}>
                   <Image
                     src={DisplayImages[key].src}

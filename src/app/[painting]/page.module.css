@@ -27,6 +27,8 @@
 }
 
 .details {
+  display: flex;
+  flex-direction: column;
   background:rgb(74, 77, 102);
   width: 30%;
   padding: 3svh;
@@ -37,6 +39,10 @@
   margin-bottom: 2svh;
 }
 
+.details_list {
+  display: flex;
+  flex-direction: column;
+}
 .details_list_item {
   margin-bottom: 5px;
 }
