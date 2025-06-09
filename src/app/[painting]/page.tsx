@@ -1,21 +1,42 @@
 import styles from "./page.module.css";
-import React from "react";
 import Image from "next/image";
-import { DetailImages, PortfolioImages } from "../PortfolioImages.tsx";
+import { DetailImages, PortfolioMeta } from "../PortfolioMeta.tsx";
 import Gallery from "../Gallery/page.tsx";
+import fs from 'fs';
+import path from 'path';
+import { imageSize } from 'image-size'
 
-export default async function DetailPage({
+
+async function DetailPage({
   params,
 }: {
   params: Promise<{ painting: string }>;
 }) {
   const { painting } = await params;
-  // console.log('painting', painting)
-  const paintingData = PortfolioImages[painting];
-
+  const paintingData = PortfolioMeta[painting];
+  const photosFolder = path.join('public', 'portfolioImg', 'detailImg', painting);
+  const nextFolder = path.join('portfolioImg', 'detailImg', painting);
+  const fileNames = fs.readdirSync(photosFolder);
+  const imageFiles = fileNames.filter(file => {
+    const extension = path.extname(file).toLowerCase();
+    return ['.jpg', '.jpeg', '.png', '.gif'].includes(extension);
+  });
+  const dynamicImages = imageFiles.map((file) => {
+    const filePath = path.join(photosFolder, file);
+    const sourcePath = path.join(nextFolder, file);
+    const buffer = fs.readFileSync(filePath);
+    const { width, height } = imageSize(buffer);
+    return {
+      src: sourcePath,
+      alt: file,
+      width: width,
+      height: height,
+    };
+  })
+  // console.log('dynamicImages', dynamicImages)
   return (
     <div>
-      <Gallery galleryImages={paintingData} />
+      <Gallery galleryImages={dynamicImages} />
       <main className={styles.main}>
         <div className={styles.main_content}>
           <h1 className={styles.title}>{paintingData.title}</h1>
@@ -31,25 +52,7 @@ export default async function DetailPage({
       </main>
     </div>
   );
-  // return (
-  //   <div>
-  //     <h1>{painting}</h1>
-  //     {DetailImages[painting].map((img, index) => {
-  //       return (
-  //         <div key={index}>
-  //           <h2>{img.title}</h2>
-  //           <Image
-  //             src={img.src}
-  //             alt={img.title}
-  //             width={
-  //               img.width /
-  //               (img.height / 300)
-  //             }
-  //             height={300}
-  //           />
-  //         </div>
-  //       )
-  //     })}
-  //   </div>
-  // )
 }
+
+
+export default DetailPage;

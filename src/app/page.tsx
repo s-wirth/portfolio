@@ -1,8 +1,7 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { DisplayImages } from "./PortfolioImages";
-import img from "../../public/portfolioImg/displayImg/AmberSunset.jpeg";
+import { DisplayImages } from "./PortfolioMeta";
 
 export default function Home() {
   return (

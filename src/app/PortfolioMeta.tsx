@@ -33,7 +33,7 @@ export const DisplayImages = {
   DragonHeart: { ...DragonHeart, title: "Dragon Heart" },
 };
 
-export const PortfolioImages = {
+export const PortfolioMeta = {
   AMBER_SUNSET: {
     title: "Amber Sunset",
     slug: "amber-sunset",
@@ -42,19 +42,5 @@ export const PortfolioImages = {
       materials: "Acrylic on Canvas",
       dimensions: "16 x 20",
     },
-    images: [
-      {
-        src: AS1,
-        alt: "Amber Sunset Display Image 1",
-        main_image: true,
-        thumbnail: AS1_tn,
-      },
-      {
-        src: AS2,
-        alt: "Amber Sunset Display Image 2",
-        main_image: false,
-        thumbnail: AS2_tn,
-      },
-    ],
   },
 };
