@@ -26,6 +26,7 @@ export default function Home() {
                       (DisplayImages[key].height / 300)
                     }
                     height={300}
+                    quality={30}
                   />
                   <div className={styles.overlay}>
                     <p className={styles.overlay_title}>

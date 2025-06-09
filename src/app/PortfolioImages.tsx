@@ -33,17 +33,15 @@ export const DisplayImages = {
   DragonHeart: { ...DragonHeart, title: "Dragon Heart" },
 };
 
-export const DetailImages = {
-  AmberSunset: [
-    { title: "Amber Sunset", src: AS1 },
-    { title: "Amber Sunset", src: AS2 },
-  ],
-};
-
 export const PortfolioImages = {
   AMBER_SUNSET: {
     title: "Amber Sunset",
     slug: "amber-sunset",
+    description: "This is a description lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. ", 
+    meta: {
+      materials: "Acrylic on Canvas",
+      dimensions: "16 x 20",
+    },
     images: [
       {
         src: AS1,

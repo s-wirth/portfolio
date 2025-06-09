@@ -1,0 +1,37 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+}
+
+.main_content {
+  width: 70%;
+  padding: 5svh;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.title {
+  margin-bottom: 2svh;
+  text-align: center;
+}
+
+.description {
+  max-width: 70%;
+}
+
+.details {
+  background:rgb(74, 77, 102);
+  width: 30%;
+  padding: 3svh;
+  gap: 5px;
+}
+
+.details_title {
+  margin-bottom: 2svh;
+}

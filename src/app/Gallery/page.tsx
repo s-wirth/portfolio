@@ -16,12 +16,9 @@ import { useState } from "react";
 // ];
 
 export default function Gallery(galleryImages: any) {
-  console.log('galleryImages', galleryImages)
-  console.log('galleryImages keys', Object.keys(galleryImages))
-  console.log('galleryImages values', galleryImages['galleryImages']['images'])
   const [displayImageIndex, setDisplayImageIndex] = useState(0);
   const [displayImages, setDisplayImages] = useState(galleryImages['galleryImages']['images']);
-  console.log('displayImages', displayImages)
+  console.log('galleryImages', galleryImages)
   return (
     <div className={styles.gallery_container}>
       <div className={styles.gallery_carousel}>
