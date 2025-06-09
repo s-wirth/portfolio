@@ -32,11 +32,16 @@ async function DetailPage({
       width: width,
       height: height,
     };
-  })
-  // console.log('dynamicImages', dynamicImages)
+  });
+  const placerholderImage = [{
+    src: '/placeholder.png',
+    alt: 'placeholder',
+    width: 100,
+    height: 100
+  }]
   return (
     <div>
-      <Gallery galleryImages={dynamicImages} />
+      <Gallery galleryImages={dynamicImages.length > 0 ? dynamicImages : placerholderImage} />
       <main className={styles.main}>
         <div className={styles.main_content}>
           <h1 className={styles.title}>{paintingData.title}</h1>
