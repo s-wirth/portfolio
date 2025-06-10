@@ -68,7 +68,7 @@
 .header {
   display: grid;
   border-bottom: 1px solid #6a6ab9;
-  grid-template-columns: 10% 90%;
+  grid-template-columns: 10% 80% 10%;
   grid-template-rows: 100%;
   align-items: center;
   justify-items: center;
@@ -76,8 +76,6 @@
   height: 7vh;
   background: none;
   color: white;
-  font-family: "Cormorant", serif;
-  font-size: 20px;
 }
 
 .header_logo {
@@ -86,6 +84,22 @@
 }
 
 .header_title {
+  font-family: "Cormorant", serif;
+  font-size: 20px;
+}
+
+.header_contact {
+  height: 30px;
+  width: 30px;
+  transition: height 0.2s, width 0.2s;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center, 50%, 50%;
+
+  &:hover {
+    height: 35px;
+    width: 35px;
+  }
 }
 
 .main {

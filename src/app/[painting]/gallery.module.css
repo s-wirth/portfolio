@@ -117,6 +117,7 @@
   overflow: auto;
   background-size: cover;
   background-position: center;
+  transition: border 0.2s;
 }
 .gallery_thumbnail {
   border: 6px solid transparent;
