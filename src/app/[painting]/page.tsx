@@ -1,6 +1,8 @@
 import styles from "./page.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import { DetailImages, PortfolioMeta } from "../PortfolioMeta.tsx";
+import logo from "../../../public/PortfolioLogo.png";
 import Gallery from "./GalleryComponent.tsx";
 import fs from 'fs';
 import path from 'path';
@@ -41,6 +43,12 @@ async function DetailPage({
   }]
   return (
     <div>
+      <header className={styles.header}>
+        <Link href={`/`}>
+          <Image className={styles.header_logo} src={logo} alt="logo" width={100} height={100} />
+        </Link>
+        <div className={styles.header_title}>Sophie Wirth - Art Portfolio</div>
+      </header>
       <Gallery galleryImages={dynamicImages.length > 0 ? dynamicImages : placerholderImage} />
       <main className={styles.main}>
         <div className={styles.main_content}>

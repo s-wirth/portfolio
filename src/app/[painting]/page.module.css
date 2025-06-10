@@ -58,10 +58,40 @@
     justify-content: space-evenly;
   }
 }
+/* Mobile styles */
+@media (max-width: 600px) {
+  .details_list {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+.header {
+  display: grid;
+  border-bottom: 1px solid #6a6ab9;
+  grid-template-columns: 10% 90%;
+  grid-template-rows: 100%;
+  align-items: center;
+  justify-items: center;
+  width: 100vw;
+  height: 7vh;
+  background: none;
+  color: white;
+  font-family: "Cormorant", serif;
+  font-size: 20px;
+}
+
+.header_logo {
+  height: 30px;
+  width: auto;
+}
+
+.header_title {
+}
+
 .main {
   display: flex;
   width: 100vw;
-  height: 50vh;
+  height: 43vh;
   letter-spacing: .8px;
 }
 
