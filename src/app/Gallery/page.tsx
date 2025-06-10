@@ -40,15 +40,13 @@ export default function Gallery({galleryImages}) {
       </div>
       <div className={styles.gallery_thumbnails_showcase}>
         {galleryImages.map((image, index) => (
-          <img
-            key={index}
-            className={styles.gallery_thumbnail + " " + (index === displayImageIndex ? styles.thumbnail_selected : "")}
-            src={image.src}
-            alt={image.alt}
-            onClick={() => {
-              setDisplayImageIndex(index);
-            }}
-          />
+          <div key={index} 
+          className={ index === displayImageIndex ? styles.gallery_thumbnail_selected : styles.gallery_thumbnail} 
+          style={{backgroundImage: `url(${image.src})`}}
+          // style={{`background-image: url(${image.src});`}}
+          onClick={() => {
+            setDisplayImageIndex(index);
+          }}/>
         ))}
       </div>
     </div>
