@@ -1,5 +1,5 @@
 'use client'
-import styles from "./page.module.css";
+import styles from "./gallery.module.css";
 import { useState } from "react";
 
 export default function Gallery({galleryImages}) {
@@ -43,7 +43,6 @@ export default function Gallery({galleryImages}) {
           <div key={index} 
           className={ index === displayImageIndex ? styles.gallery_thumbnail_selected : styles.gallery_thumbnail} 
           style={{backgroundImage: `url(${image.src})`}}
-          // style={{`background-image: url(${image.src});`}}
           onClick={() => {
             setDisplayImageIndex(index);
           }}/>

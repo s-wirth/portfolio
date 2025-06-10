@@ -1,14 +1,71 @@
+/* Desktop styles */
+@media (min-width: 901px) {
+  .main {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .main_content {
+    width: 70%;
+  }
+  .details {
+    width: 30%;
+    flex-direction: column;
+    padding: 3svh;
+  }
+  .description {
+    max-width: 70%;
+  }
+  .details_title {
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 2svh;
+  }
+  .details_list {
+    flex-direction: column;
+  }
+}
+/* M&T styles */
+@media (max-width: 900px) {
+  .main {
+    flex-direction: column-reverse;
+    justify-content: start;
+  }
+  .main_content {
+  width: 100%;
+  }
+  .description {
+    max-width: 90%;
+  }
+  .details {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    padding: 1svh;
+  }
+  .details_title {
+    width: 70%;
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 1svh;
+  }
+  .details_title {
+    text-align: center;
+  }
+  .details_list {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
 .main {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   width: 100vw;
   height: 50vh;
   letter-spacing: .8px;
 }
 
 .main_content {
-  width: 70%;
   padding: 5svh;
   gap: 10px;
   display: flex;
@@ -19,6 +76,7 @@
 }
 
 .title {
+  color: white;
   font-family: "Cormorant", serif;
   font-size: 40px;
   margin-bottom: 3svh;
@@ -26,29 +84,29 @@
   border-bottom: 2px solid #97107a;
 }
 
-.description {
-  max-width: 70%;
-}
-
 .details {
   display: flex;
-  flex-direction: column;
   background: #20204b;
-  width: 30%;
-  padding: 3svh;
   gap: 5px;
 }
 
 .details_title {
-  font-weight: 400;
-  font-size: 24px;
-  margin-bottom: 2svh;
+  color: white;
+  border-bottom: .5px solid #6a6ab9;
 }
 
 .details_list {
   display: flex;
-  flex-direction: column;
+  list-style: none;
 }
 .details_list_item {
+  padding-left: 20px;
   margin-bottom: 5px;
+  position: relative;
+
+  &:before {
+    content: '\2765';
+    position: absolute;
+    left: 0;
+  }
 }

@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import { DetailImages, PortfolioMeta } from "../PortfolioMeta.tsx";
-import Gallery from "../Gallery/page.tsx";
+import Gallery from "./GalleryComponent.tsx";
 import fs from 'fs';
 import path from 'path';
 import { imageSize } from 'image-size'
