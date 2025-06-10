@@ -1,3 +1,27 @@
+/* Desktop styles */
+@media (min-width: 901px) {
+  .gallery {
+    width: 80%;
+    gap: 3svh;
+  }
+}
+/* M&T styles */
+@media (max-width: 900px) {
+  .gallery {
+    gap: 1svh;
+  }
+  .gallery_painting {
+    height: 200px;
+    width: auto;
+  }
+}
+/* Mobile styles */
+@media (max-width: 600px) {
+  .gallery_painting {
+    height: auto;
+    width: 100%;
+  }
+}
 .page {
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
@@ -36,12 +60,14 @@
 }
 
 .header_title {
+  color: white;
   font-weight: 600;
   font-size: 50px;
   font-style: italic;
   letter-spacing: 2px;
   margin-bottom: 10px;
 }
+
 .header_subtitle {
   font-weight: 300;
   font-size: 30px;
@@ -82,8 +108,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 5svh;
-  width: 80%;
 }
 
 .displayImage {
@@ -110,110 +134,4 @@
   color: white;
   font-weight: bold;
   margin: 1svh 0;
-}
-
-.ctas {
-  display: flex;
-  gap: 16px;
-}
-
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: none;
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
-}
-
-a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
-}
-
-a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 158px;
-}
-/* 
-.footer {
-  display: flex;
-  gap: 24px;
-}
-
-.footer a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.footer img {
-  flex-shrink: 0;
-} */
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-}
-
-@media (max-width: 600px) {
-
-  .main {
-    align-items: center;
-  }
-
-  .main ol {
-    text-align: center;
-  }
-
-  .ctas {
-    flex-direction: column;
-  }
-
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
-  }
-
-  a.secondary {
-    min-width: auto;
-  }
-
-  /* .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  } */
-}
-
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
 }

@@ -17,6 +17,7 @@ export default function Home() {
               <Link key={key} href={`/${key}`}>
                 <div className={styles.displayImage}>
                   <Image
+                    className={styles.gallery_painting}
                     src={PortfolioMeta[key].displayImage}
                     alt={PortfolioMeta[key].title}
                     width={
