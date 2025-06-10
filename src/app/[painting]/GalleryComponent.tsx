@@ -1,10 +1,9 @@
 'use client'
+import Image from "next/image";
 import styles from "./gallery.module.css";
 import { useState } from "react";
-
-export default function Gallery({galleryImages}) {
+export default function Gallery({galleryImages} : {galleryImages: any}) {
   const [displayImageIndex, setDisplayImageIndex] = useState(0);
-  console.log('galleryImages', galleryImages)
   return (
     <div className={styles.gallery_container}>
       <div className={styles.gallery_carousel}>
@@ -34,15 +33,17 @@ export default function Gallery({galleryImages}) {
         ><div className={styles.arrow_right} /></div>
         <img
           className={styles.gallery_image}
-          src={galleryImages[displayImageIndex].src}
-          alt={galleryImages[displayImageIndex].alt}
-        />
+          height={galleryImages[displayImageIndex] ? galleryImages[displayImageIndex].height : 0}
+          width={galleryImages[displayImageIndex] ? galleryImages[displayImageIndex].width : 0}
+          src={galleryImages[displayImageIndex] ? '../' + galleryImages[displayImageIndex].src : ''}
+          alt={galleryImages[displayImageIndex] ? galleryImages[displayImageIndex].alt : ''}
+          />
       </div>
       <div className={styles.gallery_thumbnails_showcase}>
         {galleryImages.map((image, index) => (
           <div key={index} 
           className={ index === displayImageIndex ? styles.gallery_thumbnail_selected : styles.gallery_thumbnail} 
-          style={{backgroundImage: `url(${image.src})`}}
+          style={{backgroundImage: `url(${'../' + image.src})`}}
           onClick={() => {
             setDisplayImageIndex(index);
           }}/>

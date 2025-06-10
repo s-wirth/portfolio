@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Cormorant, Noto } from "next/font/google";
+import { Geist, Geist_Mono, Cormorant, Noto_Sans as Noto } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -9,6 +9,14 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+const cormorant = Cormorant({
+  variable: "--font-cormorant",
+  subsets: ["latin"],
+});
+const noto = Noto({
+  variable: "--font-noto",
   subsets: ["latin"],
 });
 
@@ -24,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" >
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${cormorant.variable} ${noto.variable}`}>
         {children}
       </body>
     </html>

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import AmberSunset from "../../public/portfolioImg/displayImg/AmberSunset.jpeg";
 import DragonHeart from "../../public/portfolioImg/displayImg/DragonHeart.jpeg";
 import HopefulSunset from "../../public/portfolioImg/displayImg/HopefulSunset.jpeg";
@@ -11,6 +10,7 @@ import ChildPortrait from "../../public/portfolioImg/displayImg/ChildPortrait.jp
 import FierySunset from "../../public/portfolioImg/displayImg/FierySunset.jpeg";
 import Pastels from "../../public/portfolioImg/displayImg/Pastels.jpeg";
 import WaterDragon from "../../public/portfolioImg/displayImg/WaterDragon.jpeg";
+
 
 export const PortfolioMeta = {
   AMBER_SUNSET: {
@@ -134,3 +134,5 @@ export const PortfolioMeta = {
     }
   },
 };
+
+export const PaintingSlugs = Object.keys(PortfolioMeta);

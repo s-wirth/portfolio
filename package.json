@@ -1,4 +1,5 @@
 {
+  "homepage": "https://s-wirth.github.io/portfolio/",
   "name": "artist-portfolio",
   "version": "0.1.0",
   "private": true,
@@ -6,7 +7,11 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export",
+    "out": "next build && next export && touch ./out/.nojekyll",
+    "predeploy": "npm run out",
+    "deploy": "npm run predeploy && gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "next": "15.3.3",
@@ -22,6 +27,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.3",
+    "gh-pages": "^6.3.0",
     "image-size": "^2.0.2",
     "sass": "^1.89.1",
     "typescript": "^5"

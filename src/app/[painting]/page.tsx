@@ -1,14 +1,20 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { DetailImages, PortfolioMeta } from "../PortfolioMeta.tsx";
+import { PortfolioMeta } from "../PortfolioMeta.tsx";
 import logo from "../../../public/PortfolioLogo.png";
 import letter from "../../../public/letter.svg";
 import Gallery from "./GalleryComponent.tsx";
 import fs from 'fs';
 import path from 'path';
 import { imageSize } from 'image-size'
-
+import { PaintingSlugs } from "../PortfolioMeta.tsx";
+export async function generateStaticParams() {
+  const slugs = PaintingSlugs.map((slug) => ({
+    painting: slug,
+  }))
+  return slugs;
+}
 
 async function DetailPage({
   params,
@@ -17,16 +23,16 @@ async function DetailPage({
 }) {
   const { painting } = await params;
   const paintingData = PortfolioMeta[painting];
-  const photosFolder = path.join('public', 'portfolioImg', 'detailImg', painting);
-  const nextFolder = path.join('portfolioImg', 'detailImg', painting);
-  const fileNames = fs.readdirSync(photosFolder);
+  const photosFolderPath = path.join('public', 'portfolioImg', 'detailImg', painting);
+  const nextFolderPath = path.join('portfolioImg', 'detailImg', painting);
+  const fileNames = fs.readdirSync(photosFolderPath);
   const imageFiles = fileNames.filter(file => {
     const extension = path.extname(file).toLowerCase();
     return ['.jpg', '.jpeg', '.png', '.gif'].includes(extension);
   });
   const dynamicImages = imageFiles.map((file) => {
-    const filePath = path.join(photosFolder, file);
-    const sourcePath = path.join(nextFolder, file);
+    const filePath = path.join(photosFolderPath, file);
+    const sourcePath = path.join(nextFolderPath, file);
     const buffer = fs.readFileSync(filePath);
     const { width, height } = imageSize(buffer);
     return {
