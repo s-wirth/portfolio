@@ -54,7 +54,7 @@ async function DetailPage({
           <Image className={styles.header_logo} src={logo} alt="logo" width={100} height={100} />
         </Link>
         <div className={styles.header_title}>Sophie Wirth - Art Portfolio</div>
-        <a className={styles.header_contact} href="mailto:a.sophiewirth@gmail.com" style={{backgroundImage: `url(${letter.src})`}} />
+        <a className={styles.header_contact} href="/about">Contact</a>
       </header>
       <Gallery galleryImages={dynamicImages.length > 0 ? dynamicImages : placerholderImage} />
       <main className={styles.main}>
