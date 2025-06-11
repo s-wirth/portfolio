@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === 'production';
+// const isProd = process.env.NODE_ENV === 'production';
 const nextConfig = {
   images: {
     loader: 'imgix',
@@ -9,8 +9,8 @@ const nextConfig = {
   },
   reactStrictMode: false,
   trailingSlash: true,
-  assetPrefix: isProd ? '/portfolio/' : '',
-  basePath: isProd ? '/portfolio' : '',
+  assetPrefix: '',
+  basePath: '',
   output: 'export',
 };
 export default nextConfig;

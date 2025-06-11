@@ -10,10 +10,9 @@ import path from 'path';
 import { imageSize } from 'image-size'
 import { PaintingSlugs } from "../PortfolioMeta.tsx";
 export async function generateStaticParams() {
-  const slugs = PaintingSlugs.map((slug) => ({
+  return PaintingSlugs.map((slug) => ({
     painting: slug,
-  }))
-  return slugs;
+  }));
 }
 
 async function DetailPage({
