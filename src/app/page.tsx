@@ -25,7 +25,9 @@ export default function Home() {
                       (PortfolioMeta[key].height / 300)
                     }
                     height={300}
-                    quality={30}
+                    quality={20}
+                    blurDataURL={PortfolioMeta[key].blurImage}
+                    placeholder="blur"
                   />
                   <div className={styles.overlay}>
                     <p className={styles.overlay_title}>

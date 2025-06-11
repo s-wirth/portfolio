@@ -1,15 +1,15 @@
-import AmberSunset from "../../public/portfolioImg/displayImg/AmberSunset.jpeg";
-import DragonHeart from "../../public/portfolioImg/displayImg/DragonHeart.jpeg";
-import HopefulSunset from "../../public/portfolioImg/displayImg/HopefulSunset.jpeg";
-import RainbowSunset from "../../public/portfolioImg/displayImg/RainbowSunset.jpeg";
-import ChaosStorm from "../../public/portfolioImg/displayImg/ChaosStorm.jpeg";
-import DreamySunset from "../../public/portfolioImg/displayImg/DreamySunset.jpeg";
-import Nebula from "../../public/portfolioImg/displayImg/Nebula.jpeg";
-import Stormy from "../../public/portfolioImg/displayImg/Stormy.jpeg";
-import ChildPortrait from "../../public/portfolioImg/displayImg/ChildPortrait.jpeg";
-import FierySunset from "../../public/portfolioImg/displayImg/FierySunset.jpeg";
-import Pastels from "../../public/portfolioImg/displayImg/Pastels.jpeg";
-import WaterDragon from "../../public/portfolioImg/displayImg/WaterDragon.jpeg";
+import AmberSunset from "../../public/portfolioImg/displayImg/resized/AmberSunset.jpg";
+import DragonHeart from "../../public/portfolioImg/displayImg/resized/DragonHeart.jpg";
+import HopefulSunset from "../../public/portfolioImg/displayImg/resized/HopefulSunset.jpg";
+import RainbowSunset from "../../public/portfolioImg/displayImg/resized/RainbowSunset.jpg";
+import ChaosStorm from "../../public/portfolioImg/displayImg/resized/ChaosStorm.jpg";
+import DreamySunset from "../../public/portfolioImg/displayImg/resized/DreamySunset.jpg";
+import Nebula from "../../public/portfolioImg/displayImg/resized/Nebula.jpg";
+import Stormy from "../../public/portfolioImg/displayImg/resized/Stormy.jpg";
+import ChildPortrait from "../../public/portfolioImg/displayImg/resized/ChildPortrait.jpg";
+import FierySunset from "../../public/portfolioImg/displayImg/resized/FierySunset.jpg";
+import Pastels from "../../public/portfolioImg/displayImg/resized/Pastels.jpg";
+import WaterDragon from "../../public/portfolioImg/displayImg/resized/WaterDragon.jpg";
 
 
 export const PortfolioMeta = {
@@ -18,6 +18,7 @@ export const PortfolioMeta = {
     slug: "amber-sunset",
     description: "This is a description lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae.consectetur adipisicing elit. Quibusdam, quae. lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae.consectetur adipisicing elit. Quibusdam, quae. lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. ", 
     displayImage: AmberSunset,
+    blurredImage: "../../public/portfolioImg/displayImg/blurred/AmberSunset_blurred.jpg",
     meta: {
       materials: "Acrylic on Canvas",
       dimensions: "16 x 20",
@@ -28,6 +29,7 @@ export const PortfolioMeta = {
     slug: "hopeful-sunset",
     description: "This is a description lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. ", 
     displayImage: HopefulSunset,
+    blurredImage: "../../public/portfolioImg/displayImg/blurred/HopefulSunset_blurred.jpg",
     meta: {
       materials: "Acrylic on Canvas",
       dimensions: "16 x 20",
@@ -38,6 +40,7 @@ export const PortfolioMeta = {
     slug: "rainbow-sunset",
     description: "This is a description lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. ", 
     displayImage: RainbowSunset,
+    blurredImage: "../../public/portfolioImg/displayImg/blurred/RainbowSunset_blurred.jpg",
     meta: {
       materials: "Acrylic on Canvas",
       dimensions: "16 x 20",
@@ -48,6 +51,7 @@ export const PortfolioMeta = {
     slug: "chaos-storm",
     description: "This is a description lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. ", 
     displayImage: ChaosStorm,
+    blurredImage: "../../public/portfolioImg/displayImg/blurred/ChaosStorm_blurred.jpg",
     meta: {
       materials: "Acrylic on Canvas",
       dimensions: "16 x 20",
@@ -58,6 +62,7 @@ export const PortfolioMeta = {
     slug: "dreamy-sunset",
     description: "This is a description lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. ", 
     displayImage: DreamySunset,
+    blurredImage: "../../public/portfolioImg/displayImg/blurred/DreamySunset_blurred.jpg",
     meta: {
       materials: "Acrylic on Canvas",
       dimensions: "16 x 20",
@@ -68,6 +73,7 @@ export const PortfolioMeta = {
     slug: "nebula",
     description: "This is a description lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. ", 
     displayImage: Nebula,
+    blurredImage: "../../public/portfolioImg/displayImg/blurred/Nebula_blurred.jpg",
     meta: {
       materials: "Acrylic on Canvas",
       dimensions: "16 x 20",
@@ -78,6 +84,7 @@ export const PortfolioMeta = {
     slug: "stormy",
     description: "This is a description lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. ", 
     displayImage: Stormy,
+    blurredImage: "../../public/portfolioImg/displayImg/blurred/Stormy_blurred.jpg",
     meta: {
       materials: "Acrylic on Canvas",
       dimensions: "16 x 20",
@@ -88,6 +95,7 @@ export const PortfolioMeta = {
     slug: "child-portrait",
     description: "This is a description lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. ", 
     displayImage: ChildPortrait,
+    blurredImage: "../../public/portfolioImg/displayImg/blurred/ChildPortrait_blurred.jpg",
     meta: {
       materials: "Acrylic on Canvas",
       dimensions: "16 x 20",
@@ -98,6 +106,7 @@ export const PortfolioMeta = {
     slug: "fiery-sunset",
     description: "This is a description lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. ", 
     displayImage: FierySunset,
+    blurredImage: "../../public/portfolioImg/displayImg/blurred/FierySunset_blurred.jpg",
     meta: {
       materials: "Acrylic on Canvas",
       dimensions: "16 x 20",
@@ -108,6 +117,7 @@ export const PortfolioMeta = {
     slug: "pastels",
     description: "This is a description lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. ", 
     displayImage: Pastels,
+    blurredImage: "../../public/portfolioImg/displayImg/blurred/Pastels_blurred.jpg",
     meta: {
       materials: "Acrylic on Canvas",
       dimensions: "16 x 20",
@@ -118,6 +128,7 @@ export const PortfolioMeta = {
     slug: "water-dragon",
     description: "This is a description lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. ", 
     displayImage: WaterDragon,
+    blurredImage: "../../public/portfolioImg/displayImg/blurred/WaterDragon_blurred.jpg",
     meta: {
       materials: "Acrylic on Canvas",
       dimensions: "16 x 20",
@@ -128,6 +139,7 @@ export const PortfolioMeta = {
     slug: "dragon-heart",
     description: "This is a description lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quae. ", 
     displayImage: DragonHeart,
+    blurredImage: "../../public/portfolioImg/displayImg/blurred/DragonHeart_blurred.jpg",
     meta: {
       materials: "Acrylic on Canvas",
       dimensions: "16 x 20",
