@@ -63,14 +63,14 @@
   height: 100%;
 }
 
-.header,
+.banner,
 .main {
   width: 100%;
   justify-content: center;
   text-align: center;
 }
 
-.header {
+.banner {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -78,29 +78,28 @@
   align-content: center;
   padding: 2svh;
   margin-bottom: 30px;
-  border-bottom: 3px solid #770c60;
   filter: drop-shadow(0 1svh 1svh #000000);
 }
 
-.header_title,
-.header_subtitle {
+.banner_title,
+.banner_subtitle {
   font-family: "Cinzel", serif;
 }
 
-.header_title {
+.banner_title {
   color: white;
   font-weight: 600;
   font-size: 50px;
   letter-spacing: 2px;
 }
 
-.header_subtitle {
-  font-weight: 300;
+.banner_subtitle {
+  color: #c148a7;
+  font-weight: 500;
   font-size: 30px;
-  margin-bottom: 20px;
 }
 
-.header_about {
+.banner_about {
   font-weight: 200;
   font-size: 20px;
   padding-bottom: 1px;
@@ -131,7 +130,7 @@
   background-position: center;
   border: 2px solid black;
   &:hover {
-    border: 2px solid #97107a;
+    border: 2px solid var(--pop);
   }
   &:hover .overlay {
     opacity: 1;

@@ -21,35 +21,22 @@
     display: none;
   }
 }
+
 .header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 2svh 0 2svh;
   border-bottom: 1px solid #6a6ab9;
   width: 100vw;
-  height: 7vh;
+  min-height: 7vh;
   background: none;
   color: white;
 }
 
-.header_logo {
-  height: 30px;
-  width: auto;
-}
-
-.header_title {
-  font-family: "Cinzel", serif;
-  font-size: 20px;
-}
-
-.header_contact {
-  display: block;
-  height: fit-content;
-  cursor: pointer;
-  text-decoration: underline;
-  text-decoration-thickness: .5px;
+.header_link {
+  margin: 0 2svh;
 }

@@ -2,18 +2,17 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { PortfolioMeta } from "./PortfolioMeta";
+import HeaderComponent from "../Components/HeaderComponent.tsx";
 
 export default function Home() {
 
   return (
     <div className={styles.page}>
-      <header className={styles.header}>
-        <h1 className={styles.header_title}>Sophie Wirth </h1>
-        <h2 className={styles.header_subtitle}>Artist Portfolio</h2>
-        <h3 className={styles.header_about}>
-          <a href="/about">About / Contact</a>
-        </h3>
-      </header>
+      <HeaderComponent></HeaderComponent>
+      <div className={styles.banner}>
+        <h1 className={styles.banner_title}>Sophie Wirth </h1>
+        <h2 className={styles.banner_subtitle}>Artist Portfolio</h2>
+      </div>
       <main className={styles.main}>
         <div className={styles.gallery}>
           {Object.keys(PortfolioMeta).map((key) => {
