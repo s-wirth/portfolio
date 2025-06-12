@@ -1,24 +1,50 @@
-/* Desktop styles */
-@media (min-width: 901px) {
+/* Big Desktop and above styles */
+@media (min-width: 1401px) {
+  .gallery {
+    width: 90%;
+  }
+  .display_image {
+    width: auto;
+    height: 45svh;
+  }
+  .gallery_painting {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/* Big Desktop styles and below */
+@media (max-width: 1400px) {
   .gallery {
     width: 80%;
-    gap: 3svh;
   }
-}
-/* M&T styles */
-@media (max-width: 900px) {
-  .gallery {
-    gap: 1svh;
+  .display_image {
+    width: 20svw;
+    height: auto;
   }
   .gallery_painting {
-    height: 200px;
-    width: auto;
-  }
-}
-/* Mobile styles */
-@media (max-width: 600px) {
-  .gallery_painting {
+    height: auto;
     width: 100%;
+  }
+}
+/* Small Desktop and Below styles */
+@media (max-width: 1200px) {
+  .gallery {
+    width: 80%;
+  }
+}
+/* Small Desktop styles */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .display_image {
+    width: 30%;
+    height: auto;
+  }
+}
+/* Tablet & Mobile styles */
+@media (max-width: 900px) {
+  .display_image {
+    width: 80%;
+    height: auto;
   }
 }
 .page {
@@ -32,6 +58,9 @@
   min-height: 100svh;
   padding: 0;
   font-family: var(--font-geist-sans);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .header,
@@ -48,7 +77,7 @@
   background: #20204b;
   align-content: center;
   padding: 2svh;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   border-bottom: 3px solid #770c60;
   filter: drop-shadow(0 1svh 1svh #000000);
 }
@@ -85,48 +114,37 @@
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
-}
-
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
-}
-
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
-}
-
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
-  justify-content: center;
+  flex-grow: 1;
 }
 
 .gallery {
+  height: 100%;
+  gap: 2svh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-.displayImage {
+.display_image {
   position: relative;
-  display: flex;
-  border: 4px solid transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid black;
   &:hover {
-    border: 4px solid #97107a;
+    border: 2px solid #97107a;
   }
   &:hover .overlay {
     opacity: 1;
   }
+}
+
+.link {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
 }
 
 .overlay {
