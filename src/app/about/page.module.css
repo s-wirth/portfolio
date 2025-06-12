@@ -1,11 +1,15 @@
 /* Desktop styles */
 @media (min-width: 901px) {
-  .main_text {
+  .about {
     width: 70%;
   }
 
-  .main_contact {
+  .contact {
     width: 30%;
+  }
+  .about_profile_picture {
+    height: 300px;
+    width: 300px;
   }
 }
 /* M&T styles */
@@ -13,79 +17,66 @@
   .main {
     flex-direction: column;
   }
+  .about {
+    margin-bottom: 5svh;
+  }
+  .about_profile_picture {
+    height: 200px;
+    width: 200px;
+  }
 }
+
 .main {
   display: flex;
   height: 93vh;
 }
 
-.main_text,
-.main_contact {
-  padding: 2svh;
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.main_text {
+.about_profile_picture {
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 3svh 0;
+}
+
+.about_title {
+  width: 100%;
+  color: white;
+  font-family: "Cormorant", serif;
+  font-size: 40px;
+  margin-bottom: 3svh;
+  text-align: center;
+  border-bottom: 2px solid #97107a;
+}
+
+.about_text {
   display: grid;
   align-items: center;
   justify-items: center;
   align-content: start;
+  width: 80%;
 }
 
-.main_contact {
-  background:rgb(41, 41, 97);
-}
-
-.main_profile {
-  height: 300px;
-  width: auto;
-  margin-bottom: 2svh;
+.contact {
+  background: rgb(41, 41, 97);
+  padding: 2svh;
+  flex-grow: 1;
 }
 
 .contact_title {
   color: white;
-  border-bottom: .5px solid #6a6ab9;
+  border-bottom: 0.5px solid #6a6ab9;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 2svh;
 }
 
 .contact_p {
   margin-bottom: 2svh;
-}
-
-.header {
-  display: grid;
-  border-bottom: 1px solid #6a6ab9;
-  grid-template-columns: 10% 80% 10%;
-  grid-template-rows: 100%;
-  align-items: center;
-  justify-items: center;
-  width: 100vw;
-  height: 7vh;
-  background: none;
-  color: white;
-}
-
-.header_logo {
-  height: 30px;
-  width: auto;
-}
-
-.header_title {
-  font-family: "Cormorant", serif;
-  font-size: 20px;
-}
-
-.header_contact {
-  height: 30px;
-  width: 30px;
-  transition: height 0.2s, width 0.2s;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom center, 50%, 50%;
-
-  &:hover {
-    height: 35px;
-    width: 35px;
-  }
 }

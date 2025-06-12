@@ -1,21 +1,25 @@
 import styles from "./page.module.css";
 import Link from "next/link";
-import Image from "next/image";
 import logo from "../../../public/PortfolioLogo.png";
 import letter from "../../../public/letter.svg";
 import profile from "../../../public/profile.jpg";
 import HeaderComponent from "../../Components/HeaderComponent.tsx";
 export default function About() {
+  const isProd = process.env.NODE_ENV === 'production';
+  console.log('profile', profile)
   return (
     <div>
       <HeaderComponent />
       <main className={styles.main}>
-        <div className={styles.main_text}>
-          <Image className={styles.main_profile} src={profile} alt="profile" />
-          <p className={styles.main_p}>I am a self-taught artist based in Berlin. I mostly work with acrylic
-          paint and enjoy using a lot of colours in my work.</p>
+        <div className={styles.about}>
+          <div className={styles.about_profile_picture} style={{backgroundImage: `url(${isProd ? profile.src : '../' + profile.src})`}} />
+          <div className={styles.about_text}>
+            <h1 className={styles.about_title}>About</h1>
+            <p className={styles.about_p}>I am a self-taught artist based in Berlin. My preferred medium is acrylic paint on canvas, which allows for the application of a multitude of layers. I am, and have always been, drawn to the colourful and aesthetically pleasing things in life. This certainly reflects in my art, in which I enjoy playing with intense and varied colour palettes. Through the layering of paint, I strive to create detail-rich paintings, which suck the viewer in and invite to getting lost in them. 
+Some of my paintings carry meaning with them, through symbolism, composition and motif, while others are simply an expression of the joy of being able to perceive beauty.</p>
+          </div>
         </div>
-        <aside className={styles.main_contact}>
+        <aside className={styles.contact}>
           <h2 className={styles.contact_title}>Purchases</h2>
           <p className={styles.contact_p}>
             To purchase a piece, please email me with title of the work you're
