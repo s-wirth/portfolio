@@ -45,7 +45,7 @@ export default function Gallery({galleryImages} : {galleryImages: any}) {
         {galleryImages.map((image, index) => (
           <div key={index} 
           className={ index === displayImageIndex ? styles.gallery_thumbnail_selected : styles.gallery_thumbnail} 
-          style={{backgroundImage: `url(${isProd ? image.src : '../' + image.src})`}}
+          style={{backgroundImage: `url(${'../' + image.src})`}}
           onClick={() => {
             setDisplayImageIndex(index);
           }}/>
