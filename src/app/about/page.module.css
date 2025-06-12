@@ -64,7 +64,7 @@
 }
 
 .contact {
-  background: rgb(41, 41, 97);
+  background: var(--header);
   padding: 2svh;
   flex-grow: 1;
 }
@@ -79,4 +79,10 @@
 
 .contact_p {
   margin-bottom: 2svh;
+}
+.contact_link {
+  &:hover{
+    text-decoration: underline;
+    text-decoration-thickness: .5px;
+  }
 }

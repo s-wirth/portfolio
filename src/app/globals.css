@@ -1,5 +1,6 @@
 :root {
-  --background:rgb(13, 13, 30);
+  --background:rgb(32, 32, 68);
+  --header:rgb(13, 13, 30);
   --foreground:rgb(222, 222, 244);
   --pop:rgb(193, 72, 167);
 }

@@ -82,11 +82,11 @@
 
 }
 .gallery_carousel_btnleft {
-  background-image: linear-gradient(to left, rgba(0,0,0,0), #292961);
+  background-image: linear-gradient(to left, rgba(0,0,0,0), var(--header));
   left: 0;
 }
 .gallery_carousel_btnright {
-  background-image: linear-gradient(to right, rgba(0,0,0,0), #292961);
+  background-image: linear-gradient(to right, rgba(0,0,0,0), var(--header));
   right: 0;
 }
 
@@ -107,7 +107,7 @@
 }
 
 .gallery_thumbnails_showcase {
-  background:rgb(41, 41, 97);
+  background:var(--header);
   overflow: auto;
   gap: 15px;
   padding: 2svh;

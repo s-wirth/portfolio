@@ -23,6 +23,7 @@
 }
 
 .header {
+  background: var(--header);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -30,13 +31,15 @@
   align-items: center;
   justify-content: center;
   padding: 0 2svh 0 2svh;
-  border-bottom: 1px solid #6a6ab9;
   width: 100vw;
   min-height: 7vh;
-  background: none;
   color: white;
 }
 
 .header_link {
   margin: 0 2svh;
+  &:hover{
+    text-decoration: underline;
+    text-decoration-thickness: .5px;
+  }
 }

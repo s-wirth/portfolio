@@ -36,7 +36,7 @@ Some of my paintings carry meaning with them, through symbolism, composition and
           <h2 className={styles.contact_title}>Contact</h2>
           <p className={styles.contact_p}>
             You can contact me at {""}
-            <a href="mailto:a.sophiewirth@gmail.com">a.sophiewirth@gmail.com</a>
+            <a className={styles.contact_link} href="mailto:a.sophiewirth@gmail.com">a.sophiewirth@gmail.com</a>
           </p>
         </aside>
       </main>

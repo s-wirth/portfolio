@@ -89,7 +89,7 @@
 
 .details {
   display: flex;
-  background: #20204b;
+  background: var(--header);
   gap: 5px;
 }
 

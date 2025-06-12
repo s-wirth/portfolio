@@ -74,11 +74,11 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  background: #20204b;
+  background:rgb(19, 19, 46);
   align-content: center;
   padding: 2svh;
   margin-bottom: 30px;
-  filter: drop-shadow(0 1svh 1svh #000000);
+  /* filter: drop-shadow(0 1svh 1svh #000000); */
 }
 
 .banner_title,
