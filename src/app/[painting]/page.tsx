@@ -5,6 +5,7 @@ import { PortfolioMeta } from "../PortfolioMeta.tsx";
 import logo from "../../../public/PortfolioLogo.png";
 import letter from "../../../public/letter.svg";
 import Gallery from "./GalleryComponent.tsx";
+import HeaderComponent from "../../Components/HeaderComponent.tsx";
 import fs from 'fs';
 import path from 'path';
 import { imageSize } from 'image-size'
@@ -49,13 +50,7 @@ async function DetailPage({
   }]
   return (
     <div>
-      <header className={styles.header}>
-        <Link href={`/`}>
-          <Image className={styles.header_logo} src={logo} alt="logo" width={100} height={100} />
-        </Link>
-        <div className={styles.header_title}>Sophie Wirth - Art Portfolio</div>
-        <a className={styles.header_contact} href="/about">Contact</a>
-      </header>
+      <HeaderComponent />
       <Gallery galleryImages={dynamicImages.length > 0 ? dynamicImages : placerholderImage} />
       <main className={styles.main}>
         <div className={styles.main_content}>

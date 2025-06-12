@@ -4,26 +4,11 @@ import Image from "next/image";
 import logo from "../../../public/PortfolioLogo.png";
 import letter from "../../../public/letter.svg";
 import profile from "../../../public/profile.jpg";
+import HeaderComponent from "../../Components/HeaderComponent.tsx";
 export default function About() {
   return (
     <div>
-      <header className={styles.header}>
-        <Link href={`/`}>
-          <Image
-            className={styles.header_logo}
-            src={logo}
-            alt="logo"
-            width={100}
-            height={100}
-          />
-        </Link>
-        <div className={styles.header_title}>Sophie Wirth - Art Portfolio</div>
-        <a
-          className={styles.header_contact}
-          href="mailto:a.sophiewirth@gmail.com"
-          style={{ backgroundImage: `url(${letter.src})` }}
-        />
-      </header>
+      <HeaderComponent />
       <main className={styles.main}>
         <div className={styles.main_text}>
           <Image className={styles.main_profile} src={profile} alt="profile" />
