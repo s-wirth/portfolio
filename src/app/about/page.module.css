@@ -10,6 +10,9 @@
 }
 /* M&T styles */
 @media (max-width: 901px) {
+  .main {
+    flex-direction: column;
+  }
 }
 .main {
   display: flex;
