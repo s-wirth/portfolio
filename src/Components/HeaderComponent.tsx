@@ -16,7 +16,7 @@ export default function HeaderComponent() {
         />
       </Link>
       <div className={styles.header_title}>
-        <Link href={`/`}>Sophie Wirth- Art Portfolio</Link>
+        <Link href={`/`}>Sophie Wirth - Art Portfolio</Link>
       </div>
       <a className={styles.header_contact} href="/about">
         About/Contact
