@@ -16,15 +16,21 @@ const faunaOne = Fauna_One({
 export const metadata: Metadata = {
   title: "Sophie Wirth - Art Portfolio",
   description: "Portfolio of artist Sophie Wirth.",
-  metadataBase: new URL('https://s-wirth.com'),
+  metadataBase: new URL("https://s-wirth.com"),
   keywords: ["Sophie Wirth", "Portfolio", "Art", "Artist Portfolio"],
   openGraph: {
     title: "Sophie Wirth - Art Portfolio",
     description: "Portfolio of artist Sophie Wirth.",
-    url: 'https://s-wirth.com',
+    url: "https://s-wirth.com",
     siteName: "Sophie Wirth's Artist Portfolio",
-    type: 'website',
-    images: OGImage.src,
+    type: "website",
+    images: [
+      {
+        url: OGImage.src,
+        width: 800,
+        height: 450,
+      },
+    ],
   },
 };
 
@@ -34,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" >
+    <html lang="en">
       <body className={`${cinzel.variable} ${faunaOne.variable}}`}>
         {children}
       </body>
