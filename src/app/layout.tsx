@@ -16,6 +16,7 @@ const faunaOne = Fauna_One({
 export const metadata: Metadata = {
   title: "Sophie Wirth - Art Portfolio",
   description: "Portfolio of artist Sophie Wirth.",
+  metadataBase: new URL('https://s-wirth.com'),
     keywords: ["Sophie Wirth", "Portfolio", "Art", "Artist Portfolio"],
   openGraph: {
     images: OGImage.src,
