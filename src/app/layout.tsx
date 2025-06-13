@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Cinzel, Fauna_One } from "next/font/google";
 import "./globals.css";
-import OGImage from "../../public/og-image.png";
+import OGImage from "../../public/og-image.jpg";
 
 const cinzel = Cinzel({
   variable: "--font-cinzel",
