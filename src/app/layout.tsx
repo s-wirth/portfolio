@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Sophie Wirth - Art Portfolio",
   description: "Portfolio of artist Sophie Wirth.",
   metadataBase: new URL('https://s-wirth.com'),
-    keywords: ["Sophie Wirth", "Portfolio", "Art", "Artist Portfolio"],
+  keywords: ["Sophie Wirth", "Portfolio", "Art", "Artist Portfolio"],
   openGraph: {
     title: "Sophie Wirth - Art Portfolio",
     description: "Portfolio of artist Sophie Wirth.",
