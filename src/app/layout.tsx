@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cinzel, Fauna_One } from "next/font/google";
 import "./globals.css";
+import OGImage from "../../public/og-image.png";
 
 const cinzel = Cinzel({
   variable: "--font-cinzel",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   description: "Portfolio of artist Sophie Wirth.",
     keywords: ["Sophie Wirth", "Portfolio", "Art", "Artist Portfolio"],
   openGraph: {
-    images: '../public/og-image.png',
+    images: OGImage.src,
   },
 };
 

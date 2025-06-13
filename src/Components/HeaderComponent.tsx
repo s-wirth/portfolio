@@ -1,7 +1,6 @@
 import styles from "./headerComponent.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../public/PortfolioLogo.png";
 
 export default function HeaderComponent() {
   return (
