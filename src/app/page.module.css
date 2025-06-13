@@ -15,9 +15,6 @@
 
 /* Big Desktop styles and below */
 @media (max-width: 1400px) {
-  .gallery {
-    width: 80%;
-  }
   .display_image {
     width: 20svw;
     height: auto;
@@ -30,7 +27,7 @@
 /* Small Desktop and Below styles */
 @media (max-width: 1200px) {
   .gallery {
-    width: 80%;
+    width: 100%;
   }
 }
 /* Small Desktop styles */
@@ -43,7 +40,7 @@
 /* Tablet & Mobile styles */
 @media (max-width: 900px) {
   .display_image {
-    width: 80%;
+    width: 90%;
     height: auto;
   }
 }

@@ -15,6 +15,10 @@ const faunaOne = Fauna_One({
 export const metadata: Metadata = {
   title: "Sophie Wirth - Art Portfolio",
   description: "Portfolio of artist Sophie Wirth.",
+    keywords: ["Sophie Wirth", "Portfolio", "Art", "Artist Portfolio"],
+  openGraph: {
+    images: '../public/og-image.png',
+  },
 };
 
 export default function RootLayout({
