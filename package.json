@@ -13,8 +13,6 @@
     "deploy": "npm run predeploy && gh-pages -d out --dotfiles"
   },
   "dependencies": {
-    "form-data": "^4.0.3",
-    "mailgun.js": "^12.0.2",
     "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

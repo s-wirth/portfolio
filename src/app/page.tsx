@@ -16,7 +16,6 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.gallery}>
           {Object.keys(PortfolioMeta).map((key) => {
-            console.log('PortfolioMeta[key]', PortfolioMeta[key])
             return (
               <div key={key} className={styles.display_image}
               style={{backgroundImage: `url(${PortfolioMeta[key].blurredImage})`}}

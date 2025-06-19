@@ -1,11 +1,43 @@
 /* Desktop styles */
 @media (min-width: 901px) {
+  .contact_section {
+    margin-top: 5svh;
+    width: 50%;
+  }
 }
 /* M&T styles */
 @media (max-width: 901px) {
+  .contact_section {
+    margin-top: 5svh;
+    width: 90%;
+  }
 }
 
 .main {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
   height: 93vh;
+}
+
+
+.contact_title {
+  color: white;
+  text-align: center;
+  border-bottom: 0.5px solid #6a6ab9;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 2svh;
+}
+
+.contact_p {
+  margin-bottom: 2svh;
+  text-align: center;
+}
+.contact_link {
+  &:hover{
+    text-decoration: underline;
+    text-decoration-thickness: .5px;
+  }
 }

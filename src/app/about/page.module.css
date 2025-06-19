@@ -1,15 +1,16 @@
 /* Desktop styles */
 @media (min-width: 901px) {
   .about {
-    width: 70%;
+    width: 100%;
   }
 
-  .contact {
-    width: 30%;
-  }
   .about_profile_picture {
     height: 300px;
     width: 300px;
+  }
+
+  .about_text {
+    width: 60%;
   }
 }
 /* M&T styles */
@@ -23,6 +24,9 @@
   .about_profile_picture {
     height: 200px;
     width: 200px;
+  }
+  .about_text {
+    width: 80%;
   }
 }
 
@@ -60,29 +64,4 @@
   align-items: center;
   justify-items: center;
   align-content: start;
-  width: 80%;
-}
-
-.contact {
-  background: var(--header);
-  padding: 2svh;
-  flex-grow: 1;
-}
-
-.contact_title {
-  color: white;
-  border-bottom: 0.5px solid #6a6ab9;
-  font-weight: 400;
-  font-size: 20px;
-  margin-bottom: 2svh;
-}
-
-.contact_p {
-  margin-bottom: 2svh;
-}
-.contact_link {
-  &:hover{
-    text-decoration: underline;
-    text-decoration-thickness: .5px;
-  }
 }
