@@ -7,7 +7,7 @@ export default function HeaderComponent() {
     <header className={styles.header}>
       <Link className={styles.header_link} href={`/`}>Home</Link>
       <Link className={styles.header_link} href={`/about`}>About</Link>
-      <Link className={styles.header_link} href={`/about`}>Contact</Link>
+      <Link className={styles.header_link} href={`/contact`}>Contact</Link>
     </header>
   );
 }

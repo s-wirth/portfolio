@@ -1,0 +1,11 @@
+/* Desktop styles */
+@media (min-width: 901px) {
+}
+/* M&T styles */
+@media (max-width: 901px) {
+}
+
+.main {
+  display: flex;
+  height: 93vh;
+}
