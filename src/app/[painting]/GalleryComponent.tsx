@@ -2,9 +2,9 @@
 import Image from "next/image";
 import styles from "./gallery.module.css";
 import { useState } from "react";
+import { GalleryImageInterface } from "../tsTypes";
 
-const isProd = process.env.NODE_ENV === 'production';
-export default function Gallery({galleryImages} : {galleryImages: any}) {
+export default function Gallery({galleryImages} : {galleryImages: GalleryImageInterface[]}) {
   const [displayImageIndex, setDisplayImageIndex] = useState(0);
   return (
     <div className={styles.gallery_container}>

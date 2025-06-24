@@ -1,9 +1,5 @@
 import styles from "./page.module.css";
-import Image from "next/image";
-import Link from "next/link";
 import { PortfolioMeta } from "../PortfolioMeta.tsx";
-import logo from "../../../public/PortfolioLogo.png";
-import letter from "../../../public/letter.svg";
 import Gallery from "./GalleryComponent.tsx";
 import HeaderComponent from "../../Components/HeaderComponent.tsx";
 import fs from 'fs';
