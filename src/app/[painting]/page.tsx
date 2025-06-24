@@ -42,7 +42,7 @@ async function DetailPage({
       height: height,
     };
   });
-  const placerholderImage = [{
+  const placeholderImage = [{
     src: '/placeholder.png',
     alt: 'placeholder',
     width: 100,
@@ -51,7 +51,7 @@ async function DetailPage({
   return (
     <div>
       <HeaderComponent />
-      <Gallery galleryImages={dynamicImages.length > 0 ? dynamicImages : placerholderImage} />
+      <Gallery galleryImages={dynamicImages.length > 0 ? dynamicImages : placeholderImage} />
       <main className={styles.main}>
         <div className={styles.main_content}>
           <h1 className={styles.title}>{paintingData.title}</h1>
