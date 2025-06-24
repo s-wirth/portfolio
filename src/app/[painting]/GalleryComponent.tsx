@@ -2,7 +2,7 @@
 import Image from "next/image";
 import styles from "./gallery.module.css";
 import { useState } from "react";
-import { GalleryImageInterface } from "../tsTypes";
+import { GalleryImageInterface } from "../../tsTypes.ts";
 
 export default function Gallery({galleryImages} : {galleryImages: GalleryImageInterface[]}) {
   const [displayImageIndex, setDisplayImageIndex] = useState(0);
