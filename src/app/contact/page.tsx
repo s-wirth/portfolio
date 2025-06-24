@@ -14,7 +14,7 @@ export default function Contact() {
           <h2 className={styles.contact_title}>Contact</h2>
           <p className={styles.contact_p}>
             You can contact me at {""}
-            <a className={styles.contact_link} href="mailto:a.sophiewirth@gmail.com">a.sophiewirth@gmail.com</a>
+            <a className={styles.contact_link} href="mailto:a.sophiewirth@gmail.com" target="_blank">a.sophiewirth@gmail.com</a>
           </p>
         </div>
         <div className={styles.contact_section}>
